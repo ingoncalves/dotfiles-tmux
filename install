@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# install dependencies
+sudo apt-get install tmux
+
+# install tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+# link tmux files
+BASEDIR="$(cd "$( dirname "$0")" && pwd)"
+ln -sf $BASEDIR/.tmux.conf ~/.tmux.conf

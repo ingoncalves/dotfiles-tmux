@@ -9,3 +9,12 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # link tmux files
 BASEDIR="$(cd "$( dirname "$0")" && pwd)"
 ln -sf $BASEDIR/.tmux.conf ~/.tmux.conf
+
+# dump gnome-terminal profile
+# dconf dump /org/gnome/terminal/ > gnome-terminal.dconf
+
+# restore gnome-terminal profile
+# dconf load /org/gnome/terminal/ < gnome-terminal.dconf
+
+# reset gnome-terminal profile
+# dconf reset -f /org/gnome/terminal/
